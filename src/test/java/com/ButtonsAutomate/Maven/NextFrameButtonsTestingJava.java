@@ -23,7 +23,13 @@ public class NextFrameButtonsTestingJava {
 		driver.findElement(By.cssSelector("#submitButton > div")).click();
 		driver.findElement(By.xpath("//*[@id=\"imageTagBox\"]/div/div[1]/div/div[1]/div")).click();
 		driver.findElement(By.xpath("//*[@id=\"formFooter\"]/div[2]/img")).click();
-		driver.findElement(By.xpath("//*[@id=\"element-62832\"]/div/div/a")).click();
+		driver.findElement(By.cssSelector("#formFooter > div:nth-child(2) > img")).click();
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		driver.quit();
 		
 	}
